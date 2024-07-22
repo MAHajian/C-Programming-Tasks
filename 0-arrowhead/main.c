@@ -1,8 +1,9 @@
 #include <stdio.h>
 
 int main() {
-	unsigned char number;
-	scanf("%hhu", &number);
+	char number;
+	scanf("%hhi", &number);
+	number = (number <= 1) ? 0 : ((number > 20) ? 20 : number);
 	for (unsigned char i = 0; i < number; i++) {
 		putchar('*');
 		for (unsigned char j = 0; j < i; j++) putchar(' ');
